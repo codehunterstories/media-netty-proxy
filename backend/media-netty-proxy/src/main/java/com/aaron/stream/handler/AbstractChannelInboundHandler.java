@@ -72,8 +72,7 @@ public abstract class AbstractChannelInboundHandler extends SimpleChannelInbound
     @NotNull
     protected String fetchRedirectUrl(@NotNull FullHttpRequest msg) throws Exception {
         if (PROXY_PROPERTIES.isTest()) {
-//            return "rtsp://admin:123456@127.0.0.1:554";
-            return "C:\\Users\\Administrator\\Desktop\\1.mp4";
+           return "rtsp://admin:123456@127.0.0.1:554";
         }
         String hostHeader = msg.headers().get(HttpHeaderNames.HOST);
         String fulUri = hostHeader + msg.uri();
